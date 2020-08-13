@@ -14,7 +14,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.3",
-        "symfony/framework-bundle": "^3.0",
+        "symfony/framework-bundle": "^3.0|^4.0",
         "symfony-cmf/core-bundle": "^2.0",
         "symfony-cmf/routing-bundle": "^2.0",
         "symfony-cmf/menu-bundle": "^2.0",
