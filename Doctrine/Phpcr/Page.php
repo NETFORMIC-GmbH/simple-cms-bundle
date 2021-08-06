@@ -347,7 +347,7 @@ class Page extends Route implements
      *
      * @return ArrayCollection the child nodes
      */
-    public function getChildren()
+    public function getChildren(): \Traversable
     {
         return $this->children;
     }
@@ -365,7 +365,7 @@ class Page extends Route implements
     /**
      * {@inheritdoc}
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -668,7 +668,7 @@ class Page extends Route implements
      *
      * {@inheritdoc}
      */
-    public function getOptions()
+    public function getOptions(): array
     {
         return parent::getOptions() + array(
             'label' => $this->getLabel(),
