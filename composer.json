@@ -13,9 +13,9 @@
     ],
     "prefer-stable": true,
     "require": {
-        "php": "^7.3",
-        "symfony/framework-bundle": "^3.0|^4.0",
-        "symfony-cmf/core-bundle": "^2.0",
+        "php": ">=7.3",
+        "symfony/framework-bundle": "^4.0|^5.0",
+        "symfony-cmf/core-bundle": "dev-master",
         "symfony-cmf/routing-bundle": "^2.0",
         "symfony-cmf/menu-bundle": "^2.0",
         "symfony-cmf/content-bundle": "^2.0",
@@ -24,8 +24,6 @@
     },
     "require-dev": {
         "symfony-cmf/testing": "^2.1",
-        "matthiasnoback/symfony-dependency-injection-test": "^3.1",
-        "matthiasnoback/symfony-config-test": "^4.0",
         "sonata-project/block-bundle": "^3.14",
         "sonata-project/core-bundle": "^3.15",
         "sonata-project/doctrine-phpcr-admin-bundle": "^2.2",
@@ -37,6 +35,9 @@
         "sonata-project/doctrine-phpcr-admin-bundle": "to provide an admin interface for editing content (~1.1)",
         "ivory/ckeditor-bundle": "to provide a CKEditor in the admin interface"
     },
+    "repositories": [
+        { "type": "vcs", "url": "git@github.com:NETFORMIC-GmbH/symfony-cmf-core-bundle.git" }
+    ],
     "autoload": {
         "psr-4": {
             "Symfony\\Cmf\\Bundle\\SimpleCmsBundle\\": ""

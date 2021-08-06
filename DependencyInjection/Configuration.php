@@ -18,9 +18,9 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder('cmf_simple_cms');
 
-        $treeBuilder->root('cmf_simple_cms')
+        $treeBuilder->getRootNode()
             ->children()
                 ->arrayNode('persistence')
                     ->addDefaultsIfNotSet()
