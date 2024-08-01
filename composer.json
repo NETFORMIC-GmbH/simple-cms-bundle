@@ -19,8 +19,8 @@
         "symfony-cmf/routing-bundle": "^2.0 || ^3.0",
         "symfony-cmf/menu-bundle": "dev-master",
         "symfony-cmf/content-bundle": "dev-master",
-        "doctrine/phpcr-bundle": "^2.0",
-        "doctrine/phpcr-odm": "^1.4 || ^2.0"
+        "doctrine/phpcr-bundle": "^3.0",
+        "doctrine/phpcr-odm": "^2.0"
     },
     "require-dev": {
         "symfony-cmf/testing": "^2.1",

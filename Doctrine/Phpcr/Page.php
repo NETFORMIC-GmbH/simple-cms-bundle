@@ -11,6 +11,7 @@
 
 namespace Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr;
 
+use Doctrine\Common\Collections\Collection;
 use LogicException;
 use Knp\Menu\NodeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -337,7 +338,7 @@ class Page extends Route implements
      *
      * {@inheritdoc}
      */
-    public function getRoutes()
+    public function getRoutes(): iterable
     {
         return array($this);
     }
@@ -347,7 +348,7 @@ class Page extends Route implements
      *
      * @return ArrayCollection the child nodes
      */
-    public function getChildren(): \Traversable
+    public function getChildren(): Collection
     {
         return $this->children;
     }
@@ -375,7 +376,7 @@ class Page extends Route implements
      *
      * {@inheritdoc}
      */
-    public function getContent()
+    public function getContent(): ?object
     {
         return $this;
     }
@@ -384,11 +385,11 @@ class Page extends Route implements
      * Never call this, it makes no sense. The SimpleCms Page is its own
      * content.
      *
-     * @param $document
+     * @param object $object
      *
      * @throws LogicException
      */
-    public function setContent($document)
+    public function setContent(object $object): static
     {
         throw new LogicException('Do not set a content object for the SimpleCMS page. It is its own content.');
     }
