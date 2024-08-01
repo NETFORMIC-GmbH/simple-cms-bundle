@@ -16,9 +16,9 @@
         "php": ">=7.3",
         "symfony/framework-bundle": "^4.0|^5.0|^6.0|^7.0",
         "symfony-cmf/core-bundle": "dev-master",
-        "symfony-cmf/routing-bundle": "^2.0",
+        "symfony-cmf/routing-bundle": "^2.0 || ^3.0",
         "symfony-cmf/menu-bundle": "dev-master",
-        "symfony-cmf/content-bundle": "^2.0",
+        "symfony-cmf/content-bundle": "dev-master",
         "doctrine/phpcr-bundle": "^2.0",
         "doctrine/phpcr-odm": "^1.4 || ^2.0"
     },
@@ -37,6 +37,7 @@
     },
     "repositories": [
         { "type": "vcs", "url": "git@github.com:NETFORMIC-GmbH/symfony-cmf-core-bundle.git" },
+        { "type": "vcs", "url": "git@github.com:NETFORMIC-GmbH/symfony-cmf-content-bundle.git" },
         { "type": "vcs", "url": "git@github.com:NETFORMIC-GmbH/symfony-cmf-menu-bundle.git" }
     ],
     "autoload": {
