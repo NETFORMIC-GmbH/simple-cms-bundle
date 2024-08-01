@@ -15,7 +15,7 @@ use PHPCR\Util\NodeHelper;
 use PHPCR\Util\PathHelper;
 use Doctrine\Bundle\PHPCRBundle\Initializer\InitializerInterface;
 use Doctrine\ODM\PHPCR\DocumentManager;
-use Doctrine\Bundle\PHPCRBundle\ManagerRegistry;
+use Doctrine\Bundle\PHPCRBundle\ManagerRegistryInterface;
 
 class HomepageInitializer implements InitializerInterface
 {
@@ -31,7 +31,7 @@ class HomepageInitializer implements InitializerInterface
     /**
      * {@inheritdoc}
      */
-    public function init(ManagerRegistry $registry)
+    public function init(ManagerRegistryInterface $registry): void
     {
         /** @var $dm DocumentManager */
         $dm = $registry->getManagerForClass('Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page');
@@ -55,7 +55,7 @@ class HomepageInitializer implements InitializerInterface
     /**
      * {@inheritdoc}
      */
-    public function getName()
+    public function getName(): string
     {
         return 'CmfSimpleCmsBundle Homepage';
     }
