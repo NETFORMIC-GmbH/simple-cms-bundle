@@ -54,7 +54,7 @@ class Page implements MigratorInterface
         $this->dataDir = $dataDir;
     }
 
-    public function init(SessionInterface $session, OutputInterface $output)
+    public function init(SessionInterface $session, OutputInterface $output): void
     {
         $this->session = $session;
         $this->output = $output;
@@ -65,7 +65,7 @@ class Page implements MigratorInterface
         return new $className(array('add_format_pattern' => true));
     }
 
-    public function migrate($path = '/', $depth = -1)
+    public function migrate($path = '/', $depth = -1): int
     {
         if (0 !== strpos($path, $this->basepath)) {
             throw new \RuntimeException("The provided identifier '$path' does not start with the base path '{$this->basepath}'");
